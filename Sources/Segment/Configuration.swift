@@ -54,6 +54,9 @@ public extension Configuration {
     @discardableResult
     func trackDeeplinks(_ enabled: Bool) -> Configuration {
         values.trackDeeplinks = enabled
+        if enabled {
+            values.trackApplicationLifecycleEvents = true
+        }
         return self
     }
     

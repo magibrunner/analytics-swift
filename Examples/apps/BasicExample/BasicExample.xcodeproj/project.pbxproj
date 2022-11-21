@@ -31,6 +31,7 @@
 		46E3836D265837EB00BA2502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E38370265837EB00BA2502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E38372265837EB00BA2502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82CB5C4F29243A1C00DF9364 /* BasicExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicExample-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				46E3836D265837EB00BA2502 /* Assets.xcassets */,
 				46E3836F265837EB00BA2502 /* LaunchScreen.storyboard */,
 				46E38372265837EB00BA2502 /* Info.plist */,
+				82CB5C4F29243A1C00DF9364 /* BasicExample-Bridging-Header.h */,
 			);
 			path = BasicExample;
 			sourceTree = "<group>";
@@ -364,7 +366,7 @@
 				46E38374265837EB00BA2502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		46E38375265837EB00BA2502 /* Build configuration list for PBXNativeTarget "BasicExample" */ = {
 			isa = XCConfigurationList;
@@ -373,7 +375,7 @@
 				46E38377265837EB00BA2502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

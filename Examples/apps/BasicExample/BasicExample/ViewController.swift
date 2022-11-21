@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func trackTapped(_ sender: Any) {
+        let deepLink = URL(string: "BasicExample://main")
+        UIApplication.shared.open(deepLink!)
         guard let day = Date().dayOfWeek() else {
             print("we couldn't get the day of the week.  the world has ended. :(")
             return

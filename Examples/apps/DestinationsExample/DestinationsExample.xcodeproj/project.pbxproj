@@ -25,6 +25,7 @@
 		469F7B112660116A0038E773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469F7B102660116A0038E773 /* Assets.xcassets */; };
 		469F7B142660116A0038E773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469F7B122660116A0038E773 /* LaunchScreen.storyboard */; };
 		469F7B1D266011D70038E773 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 469F7B1C266011D70038E773 /* Segment */; };
+		82EC643D292415FE00B7B3DA /* SegmentBraze in Frameworks */ = {isa = PBXBuildFile; productRef = 82EC643C292415FE00B7B3DA /* SegmentBraze */; };
 		965DC1262671656C00DDF9C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 965DC1252671656C00DDF9C7 /* GoogleService-Info.plist */; };
 		9697C1F52679156C00B87EC1 /* Segment_Logo_Avatar_Grey-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9697C1F42679156C00B87EC1 /* Segment_Logo_Avatar_Grey-1024.png */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 				468DE06B27D28CB200F2D94B /* SegmentFacebook in Frameworks */,
 				468DE06E27D28D1300F2D94B /* SegmentFirebase in Frameworks */,
 				469EC8D0266066130068F9E3 /* SystemConfiguration.framework in Frameworks */,
+				82EC643D292415FE00B7B3DA /* SegmentBraze in Frameworks */,
 				468DE06827D28C7E00F2D94B /* SegmentAppsFlyer in Frameworks */,
 				468DE07127D28D4700F2D94B /* SegmentMixpanel in Frameworks */,
 				469F7B1D266011D70038E773 /* Segment in Frameworks */,
@@ -156,6 +158,7 @@
 				468DE06A27D28CB200F2D94B /* SegmentFacebook */,
 				468DE06D27D28D1300F2D94B /* SegmentFirebase */,
 				468DE07027D28D4700F2D94B /* SegmentMixpanel */,
+				82EC643C292415FE00B7B3DA /* SegmentBraze */,
 			);
 			productName = DestinationsExample;
 			productReference = 469F7B04266011690038E773 /* DestinationsExample.app */;
@@ -190,6 +193,7 @@
 				468DE06927D28CB200F2D94B /* XCRemoteSwiftPackageReference "analytics-swift-facebook-app-events" */,
 				468DE06C27D28D1300F2D94B /* XCRemoteSwiftPackageReference "analytics-swift-firebase" */,
 				468DE06F27D28D4700F2D94B /* XCRemoteSwiftPackageReference "analytics-swift-mixpanel" */,
+				82EC643B292415FE00B7B3DA /* XCRemoteSwiftPackageReference "analytics-swift-braze" */,
 			);
 			productRefGroup = 469F7B05266011690038E773 /* Products */;
 			projectDirPath = "";
@@ -479,6 +483,14 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		82EC643B292415FE00B7B3DA /* XCRemoteSwiftPackageReference "analytics-swift-braze" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/segment-integrations/analytics-swift-braze";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -510,6 +522,11 @@
 		469F7B1C266011D70038E773 /* Segment */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Segment;
+		};
+		82EC643C292415FE00B7B3DA /* SegmentBraze */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82EC643B292415FE00B7B3DA /* XCRemoteSwiftPackageReference "analytics-swift-braze" */;
+			productName = SegmentBraze;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

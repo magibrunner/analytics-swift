@@ -12,6 +12,7 @@ import SegmentAppsFlyer
 import SegmentFacebook
 import SegmentFirebase
 import SegmentMixpanel
+import SegmentBraze
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,27 +23,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let configuration = Configuration(writeKey: "WRITE_KEY")
+        let configuration = Configuration(writeKey: "U6VRDTUtphNDFkUAyDvCCoHusBXgKtCG")
             .trackApplicationLifecycleEvents(true)
             .flushInterval(1)
         
         analytics = Analytics(configuration: configuration)
         
         // Add Amplitude session plugin
-        analytics?.add(plugin: AmplitudeSession())
+//        analytics?.add(plugin: AmplitudeSession())
         
         // Add Mixpanel destination plugin
-        analytics?.add(plugin: MixpanelDestination())
+//        analytics?.add(plugin: MixpanelDestination())
         
         // Add the Firebase destination plugin
-        analytics?.add(plugin: FirebaseDestination())
+//        analytics?.add(plugin: FirebaseDestination())
         
         // Add the AppsFlyer destination plugin
-        analytics?.add(plugin: AppsFlyerDestination())
+//        analytics?.add(plugin: AppsFlyerDestination())
         
         // Add the Facebook App Events plugin
-        analytics?.add(plugin: FacebookAppEventsDestination())
-        
+//        analytics?.add(plugin: FacebookAppEventsDestination())
+        analytics?.add(plugin: BrazeDestination())
         return true
     }
     

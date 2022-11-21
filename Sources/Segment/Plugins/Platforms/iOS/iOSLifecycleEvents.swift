@@ -62,6 +62,13 @@ class iOSLifecycleEvents: PlatformPlugin, iOSLifecycle {
             "url": launchOptions?[UIApplication.LaunchOptionsKey.url] ?? ""
         ])
         
+        if analytics?.configuration.values.trackDeeplinks == true {
+            if let url = launchOptions?[UIApplication.LaunchOptionsKey.url] {
+                analytics?.track(name: "Deep Link Opened", properties: ["url": url])
+            }
+        }
+            
+            
         UserDefaults.standard.setValue(currentVersion, forKey: Self.versionKey)
         UserDefaults.standard.setValue(currentBuild, forKey: Self.buildKey)
     }
@@ -100,6 +107,17 @@ class iOSLifecycleEvents: PlatformPlugin, iOSLifecycle {
             // Call application did finish launching
             self.application(nil, didFinishLaunchingWithOptions: nil)
         }
+    }
+    
+    func application(
+        _ application: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) {
+        if analytics?.configuration.values.trackDeeplinks == false {
+            return
+        }
+        print("hello", url)
     }
 }
 

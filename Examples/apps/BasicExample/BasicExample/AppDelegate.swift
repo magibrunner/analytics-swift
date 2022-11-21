@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let configuration = Configuration(writeKey: "<WRITE KEY>")
+        let configuration = Configuration(writeKey: "U6VRDTUtphNDFkUAyDvCCoHusBXgKtCG")
             .trackApplicationLifecycleEvents(true)
-            .flushInterval(10)
+            .flushInterval(1)
+            .trackDeeplinks(true)
         
         analytics = Analytics(configuration: configuration)
         analytics?.add(plugin: ConsoleLogger(name: "consoleLogger"))
@@ -40,6 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+        var url = url
+        print(url)
+        return true
+    }
 
 }
 
